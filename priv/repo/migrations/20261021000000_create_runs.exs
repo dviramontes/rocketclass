@@ -1,0 +1,16 @@
+defmodule Rocketclass.Repo.Migrations.CreateRuns do
+  use Ecto.Migration
+
+  def change do
+    create table(:runs, primary_key: false) do
+      add(:id, :string, primary_key: true)
+      add(:source, :string, null: false)
+      add(:mode, :string, null: false)
+      add(:status, :string, null: false)
+      add(:frames, :integer, default: 0)
+      add(:summary, :map, default: %{})
+      add(:error, :text)
+      timestamps(type: :utc_datetime_usec)
+    end
+  end
+end

@@ -1,0 +1,10 @@
+/_build/
+/deps/
+/.venv/
+/.cache/
+/var/
+/data/*
+!/data/.gitkeep
+__pycache__/
+.pytest_cache/
+.DS_Store
